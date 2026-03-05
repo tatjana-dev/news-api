@@ -32,17 +32,27 @@ src/
   scripts/        Datenbankinitialisierung
   services/       Geschäftslogik
   server.ts       Definition der HTTP-Routen und Serverstart
+```
 
 ## Starten
 
 Abhängigkeiten installieren:
+
+```
 npm install
+```
 
 Datenbank initialisieren:
+
+```
 npm run db:init
+```
 
 Server starten:
+
+```
 npm run dev
+```
 
 ## Test-User
 
@@ -51,12 +61,13 @@ npm run dev
   "email": "test@example.com",
   "password": "1234"
 }
+```
 
 ## Endpoints
-POST /login
-POST /logout
-GET /me
-GET /articles
-GET /articles/:id
+- `POST /login`
+- `POST /logout`
+- `GET /me`
+- `GET /articles`
+- `GET /articles/:id`
 
 `/me` ist ein geschützter Endpoint und liefert Informationen über die aktuell eingeloggte Benutzer:in.

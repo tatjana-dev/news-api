@@ -27,3 +27,6 @@ coverage/
 
 # local test artifacts
 cookies.txt
+
+#Local Data
+data/dev.db
