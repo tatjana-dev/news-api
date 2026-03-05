@@ -1,0 +1,62 @@
+# News API
+
+Kleines Backend-Projekt mit Node.js, Express und TypeScript.
+Die API stellt Artikel bereit und implementiert eine einfache Authentifizierung über Session-Cookies.
+
+## Funktionen
+
+- Login / Logout
+- geschützter Endpoint `/me`
+- Artikelübersicht und Artikeldetail
+- Passwort-Hashing mit bcrypt
+- Session-Verwaltung über SQLite
+
+## Technologie
+
+- Node.js
+- Express
+- TypeScript
+- SQLite (better-sqlite3)
+
+## Projektstruktur
+
+```text
+src/
+  controllers/    Request Handling
+  database/       Datenbank
+  dtos/           API-Datentypen (Response Objekte)
+  mappers/        Konvertierung zwischen Modellen und DTOs
+  middleware/     Authentifizierung
+  models/         Datenmodelle
+  repositories/   Datenbankzugriff
+  scripts/        Datenbankinitialisierung
+  services/       Geschäftslogik
+  server.ts       Definition der HTTP-Routen und Serverstart
+
+## Starten
+
+Abhängigkeiten installieren:
+npm install
+
+Datenbank initialisieren:
+npm run db:init
+
+Server starten:
+npm run dev
+
+## Test-User
+
+```json
+{
+  "email": "test@example.com",
+  "password": "1234"
+}
+
+## Endpoints
+POST /login
+POST /logout
+GET /me
+GET /articles
+GET /articles/:id
+
+`/me` ist ein geschützter Endpoint und liefert Informationen über die aktuell eingeloggte Benutzer:in.
